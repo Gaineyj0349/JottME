@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/entry_page"
+        android:icon="@drawable/ic_note_black_24dp"
+        android:title="@string/entry_page" />
+
+    <item
+        android:id="@+id/jott_page"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        android:title="@string/jott_page" />
+
+
+
+</menu>

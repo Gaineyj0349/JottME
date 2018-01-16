@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/entryLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/background">
+    <TextView
+        android:layout_alignParentTop="true"
+        android:background="?attr/background"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:id="@+id/entry_notification_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:text="@string/date_text"
+        android:textSize="13sp"
+        android:textColor="#3e7a35"
+        android:textStyle="bold|italic"/>
+
+    <CheckBox
+        android:layout_below="@id/entry_notification_date"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/checkboxForLVitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_below="@id/entry_notification_date"
+        android:layout_toRightOf="@+id/checkboxForLVitem"
+        android:background="?attr/background"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:id="@+id/entry_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_weight="1"
+        android:text="@string/entry_text"
+        android:textSize="20sp"
+        android:textColor="?attr/android:textColorPrimary"/>
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/entry_placeholder"
+        android:background="?attr/background"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:id="@+id/entry_date_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_weight="1"
+        android:text="@string/date_text"
+        android:textSize="10sp"
+        android:textColor="?attr/android:textColorSecondary"
+        android:textStyle="bold|italic"/>
+
+</RelativeLayout>

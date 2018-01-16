@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary1">#2196F3</color>
+    <color name="colorPrimaryDark1">#1976D2</color>
+    <color name="colorAccent1">#FF9800</color>
+    <color name="textColorPrimary1">#212121</color>
+    <color name="textColorSecondary1">#757575</color>
+    <color name="background1">#FFFFFF</color>
+    <color name="backgroundall1">#FFFFFF</color>
+
+    <color name="colorPrimary2">#9C27B0</color>
+    <color name="colorPrimaryDark2">#5c007a</color>
+    <color name="colorAccent2">#CDDC39</color>
+    <color name="textColorPrimary2">#000000</color>
+    <color name="textColorSecondary2">#b0bec5</color>
+    <color name="background2">#f1f1f2</color>
+    <color name="backgroundall2">#f1f1f2</color>
+
+    <color name="colorPrimary3">#E91E63</color>
+    <color name="colorPrimaryDark3">#C2185B</color>
+    <color name="colorAccent3">#8BC34A</color>
+    <color name="textColorPrimary3">#212121</color>
+    <color name="textColorSecondary3">#757575</color>
+    <color name="background3">#ffffff</color>
+    <color name="backgroundall3">#ffffff</color>
+
+
+    <color name="colorPrimary4">#4CAF50</color>
+    <color name="colorPrimaryDark4">#388E3C</color>
+    <color name="colorAccent4">#CDDC39</color>
+    <color name="textColorPrimary4">#212121</color>
+    <color name="textColorSecondary4">#757575</color>
+    <color name="background4">#f1f1f2</color>
+    <color name="backgroundall4">#f1f1f2</color>
+
+    <color name="colorPrimary5">#1E1F26</color>
+    <color name="colorPrimaryDark5">#080706</color>
+    <color name="colorAccent5">#78a5a3</color>
+    <color name="textColorPrimary5">#000000</color>
+    <color name="textColorSecondary5">#301B28</color>
+    <color name="background5">#B9C4C9</color>
+    <color name="backgroundall5">#B9C4C9</color>
+    
+    <color name="colorPrimary6">#607D8B</color>
+    <color name="colorPrimaryDark6">#455A64</color>
+    <color name="colorAccent6">#FFC107</color>
+    <color name="textColorPrimary6">#212121</color>
+    <color name="textColorSecondary6">#757575</color>
+    <color name="background6">#ffffff</color>
+    <color name="backgroundall6">#ffffff</color>
+    
+    
+
+
+
+
+
+
+</resources>

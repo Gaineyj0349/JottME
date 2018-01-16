@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<!--
+<ProgressBar
+        android:id="@+id/progress"
+        android:indeterminate="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+    style="?android:attr/progressBarStyleHorizontal"
+        />
+-->
+    <Spinner
+
+        android:id="@+id/dialogspinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:minWidth="150dp"
+    />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:id="@+id/bigOPScancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonbg"
+        android:text="CANCEL"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:elevation="@dimen/fab_margin"
+        />
+    <Button
+        android:id="@+id/bigOPSsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonbg"
+        android:text="SAVE"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:elevation="@dimen/fab_margin"
+       />
+    </LinearLayout>
+
+</LinearLayout>

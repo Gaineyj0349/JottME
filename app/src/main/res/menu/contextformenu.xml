@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/managefolders"
+        android:title="Manage Folders"
+
+        />
+    <item
+        android:id="@+id/pick_theme"
+        android:title="Pick Theme"
+
+        />
+    <item
+        android:id="@+id/selectMany"
+        android:title="Select Many"
+        />
+
+
+
+
+    <item
+        android:id="@+id/rate"
+        android:title="Rate this App"
+        android:iconTint="#ff0000"
+        android:iconTintMode="add"/>
+
+    <item
+        android:id="@+id/test"
+        android:title="Share this App"
+     />
+    <item
+        android:id="@+id/project_manager"
+        android:title="Project Manager"
+        />
+    <item
+        android:id="@+id/how_to_use"
+        android:title="About this App"
+        />
+
+
+
+</menu>

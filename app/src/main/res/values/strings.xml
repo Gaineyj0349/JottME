@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JottME</string>
+    <string name="entry_page">Write Jott</string>
+    <string name="jott_page">My Jotts</string>
+    <string name="info_page">Information</string>
+    <string name="entry_hint">What would you like to remember?</string>
+    <string name="entry_text">Entry Text </string>
+    <string name="date_text">Date Text</string>
+    <string name="customize_jott">Customize</string>
+    <string name="add_jott">Quick Jott</string>
+    <string name="title_activity_customize_entry">Customizar Entrada</string>
+    <string name="customizeTextDescription">this is where customizable JOTTS will happen!! Under construction</string>
+    <string name="jott_added">Jott added</string>
+    <string name="where_jott">Where is the Jott?</string>
+    <string name="jott_deleted">Jott Deleted</string>
+    <string name="title_activity_test">test</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_customize_entry1">CustomizeEntry1</string>
+    <string name="snackbarJottEdit">Jott has been edited and returned</string>
+    <string name="holdDelete">Long clicking this button will delete all Jotts and reset app.</string>
+    <string name="infoPageText">\n \n \nJottME is a simple note taking app.
+\n\nQuickly write down anything that you need to remember and access it later.\n\n
+B-)</string>
+    <string name="edit_jott">Edit</string>
+    <string name="delete_jott">Delete</string>
+    <string name="copy_jott_text">Copy Text</string>
+    <string name="howtouse1">Write Jott page:\n\nType in what you would like to remember.</string>
+    <string name="howtouse7">Then tap the Add button.</string>
+    <string name="howtouse2">My Jotts Page:\nThis is where the Jotts will be stored.\nThe list is ordered from newest to oldest.</string>
+    <string name="howtouse3">The Jotts are selectable, \njust long click (hold) each item to bring up options (edit,delete,copy text).</string>
+    <string name="howtouse4">Information page:\n\nThis screen holds the button to reset app/delete all jotts.</string>
+    <string name="howtouse5">Just hold down the reset button.</string>
+    <string name="howtouse6">How to use this app!</string>
+    <string name="app_reset">All Jotts have been erased.</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_notification_delete">NotificationDelete</string>
+    <string name="settings_activity_tv1">THE MENU BUTTON:\n
+         Use this to navigate bring up app controls and options, like creating/deleting/editing folder names in the folder manager, or picking theme, or deleting/moving multiple jotts at once.\n
+
+    </string>
+    <string name="settings_activity_tv2">\nBOTTOM NAVIGATION CONTROL\n\n
+              WRITE JOTT PAGE: \nThis is where you enter what you want to remember. After typing jott and selecting
+        the folder you wish it to save it in, use the
+        button at the top right of the screen to save it.\nTo turn the jott into a notification, hold down the button at the top right
+        until the "set up notification" menu pops up. Select the date/time you wish to be reminded and save. These will go into the Notifications folder, which is
+        app reserved. You can edit the entries in this folder, but can not alter the date once set. If you need to do this, just delete the
+        jott and recreate with different date. Create as many notifications as you wish. They will remain until you delete them.
+        There is 2 ways to delete a created notification, either from the MY JOTTS PAGE (see below) or by pressing the notification, which
+        will launch the app with the jott on a full page, then press the little trash button at the bottom right of the screen. The app closes and the
+        notification is permanentely deleted. This keeps phone clear of clutter.\n
+        MY JOTTS PAGE: \nEach jott will be in a scrollable list, each one can be edited/moved/deleted/copied. Simply
+    hold down on the jott you wish to change until a menu pops up.\n
+    </string>
+    <string name="settings_activity_tv3">THE FOLDER DROP MENU:\n
+       At apps first run, All Folders and Notifications folders are created. They are app reserved. Use this drop down menu to select where you want the
+        jott to save. You can create new folders by pressing the menu button and going to Folder Manager.
+    </string>
+    <string name="settings_activity_tv4">THE MAIN ADD BUTTON:\n
+      This button is what saves the jott. Enter your note, select a folder in spinner (if you wish it to not default to All Folders) and press once.
+        If you wish to turn the jott into a notification, hold down the button (the note must already be typed in).
+    </string>
+    <string name="settings_activity_tv5">NOTIFICATION SETUP:\n
+     A dialog  pops up when you hold the add button. Pick your desired reminder time with the buttons that say Pick Date and Pick Time, once you have done both, click the SAVE JOTT NOTIFICATION button to confirm.
+        Note if you do not have a jott and date and time selected, the notification will be canceled. All fields must be set.\n\n\n\n\n
+    </string>
+    settings_activity_tv1
+
+</resources>

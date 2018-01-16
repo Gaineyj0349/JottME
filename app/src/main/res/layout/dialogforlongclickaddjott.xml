@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textviewmaininlongclick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="Set Up Notification"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="?attr/colorPrimaryDark"/>
+    <TextView
+        android:id="@+id/textViewforlongclicknotificationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:text="Date"
+        android:layout_gravity="center"
+       />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?attr/colorPrimaryDark"/>
+
+    <Button
+            android:id="@+id/buttonToLaunchDatePicker"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Date" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?attr/colorPrimaryDark"/>
+
+    <TextView
+        android:id="@+id/textViewforlongclicknotificationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:text="Time"
+        android:layout_gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?attr/colorPrimaryDark"/>
+
+
+    <Button
+        android:id="@+id/buttonToLaunchTimePicker"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Time" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="?attr/colorPrimaryDark"/>
+    <Button
+        android:id="@+id/buttonToCancelNotification"
+        android:background="@drawable/buttonbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Cancel Notification "
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?attr/colorPrimaryDark"/>
+    <Button
+        android:id="@+id/buttonToSaveNotification"
+        android:background="@drawable/buttonbg"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Save Jott Notification "
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+
+</LinearLayout>

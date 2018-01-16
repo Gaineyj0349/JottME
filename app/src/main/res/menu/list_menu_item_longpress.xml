@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/_edit"
+        android:title="Edit/Move"
+        android:iconTint="#00ff00"
+        android:iconTintMode="add"
+        />
+
+    <item
+        android:id="@+id/_delete"
+        android:title="@string/delete_jott"
+        android:iconTint="#ff0000"
+        android:iconTintMode="add"/>
+
+    <item
+        android:id="@+id/_copy_text"
+        android:title="@string/copy_jott_text"
+        android:iconTint="#ff0000"
+        android:iconTintMode="add"/>
+
+
+</menu>
