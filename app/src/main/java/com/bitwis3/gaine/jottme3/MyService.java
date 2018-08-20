@@ -1,13 +1,18 @@
 package com.bitwis3.gaine.jottme3;
 
 import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.RemoteViews;
 
 import java.util.Calendar;
 
@@ -39,7 +44,7 @@ public class MyService extends Service {
     public int onStartCommand(Intent intent,
                               int flags, int startId) {
 
-
+        startForeground(2, getNotificationforAuto());
 
          helper = new DBHelper(this, "db_of_entries", null, 11);
          db = helper.getWritableDatabase();
@@ -50,6 +55,10 @@ public class MyService extends Service {
 if (cursor != null && cursor.moveToFirst()) {
     findNumNotifications();
     startBuilding();
+}else{
+    stopForeground(true);
+    stopSelf();
+    MyService.this.onDestroy();
 }
 
 
@@ -70,7 +79,8 @@ if (cursor != null && cursor.moveToFirst()) {
         buildThePackage();
         createNotification2();}
         while (cursor.moveToNext());
-
+    stopForeground(true);
+    stopSelf();
     MyService.this.onDestroy();
 
     }
@@ -134,6 +144,63 @@ if (cursor != null && cursor.moveToFirst()) {
         //  alarmManager1.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent1);
         alarmManager1.setExact(AlarmManager.RTC_WAKEUP, calTime, pendingIntent1);
 
+
+    }
+
+    private Notification getNotificationforAuto(){
+        RemoteViews contentView = new RemoteViews("com.bitwis3.gaine.jottme3", R.layout.custom_notification);
+        contentView.setImageViewResource(R.id.image, R.mipmap.pencil);
+
+        contentView.setTextViewText(R.id.notificationtext, "Rebuilding notifications");
+
+
+        Notification.Builder builder =
+                new Notification.Builder(this);
+
+        builder.setSmallIcon
+                (R.drawable.ic_blur_on_black_24dp);
+
+        Intent intent2 =
+                new Intent(this, MainActivity.class);
+
+
+
+
+        PendingIntent pendingIntent =
+                PendingIntent.getActivity(this, 1000000001
+                        , intent2, 0);
+
+
+
+        builder.setContentIntent(pendingIntent);
+        builder.setContent(contentView);
+
+        builder.setContentTitle("Rebuilding notifications");;
+
+
+        builder.setAutoCancel(true);
+        builder.setPriority(Notification.PRIORITY_MAX);
+        builder.setDefaults(Notification.DEFAULT_VIBRATE);
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            // Create the NotificationChannel
+            CharSequence name = "default use";
+            String description = "get reminders from this app";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel mChannel = new NotificationChannel("ChannelID", name, importance);
+            mChannel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = (NotificationManager) this.getSystemService(
+                    NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(mChannel);
+            builder.setChannelId("ChannelID");
+        }
+
+        Notification notification = builder.build();
+
+        return notification;
     }
 
 }

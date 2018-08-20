@@ -52,6 +52,8 @@
     import java.util.ArrayList;
     import java.util.Calendar;
 
+    import osmandroid.project_basics.Task;
+
     public class MainActivity extends AppCompatActivity {
 
 
@@ -631,7 +633,7 @@ updateJottListViewBasedOffSpinner();
                             startActivity(intent);
                             break;
                         case R.id.project_manager:
-                            openMarket("com.bitwis3.gaine.manageme1");
+                            Task.MoreApps(getApplicationContext(), "GainWise");
                             break;
                         case R.id.rate:
                             openMarket("com.bitwis3.gaine.jottme3");
@@ -642,11 +644,15 @@ updateJottListViewBasedOffSpinner();
                             startActivity(intent2);
 
                             break;
-
-               /*           case R.id.test:
+ /*                       case R.id.test2:
 
                             Intent i = new Intent(MainActivity.this, MyService.class);
                             startService(i);
+
+                break;
+  */                        case R.id.test:
+
+
                             String shareBody = "https://play.google.com/store/apps/details?id=com.bitwis3.gaine.jottme3";
 
                             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
@@ -658,7 +664,7 @@ updateJottListViewBasedOffSpinner();
               //  getStringALforBigMoves(DBcursorAdapter.getArrayList());
                      //       navigation.findViewById(R.id.jott_page).performClick();
                          break;
-                  */         case R.id.selectMany:
+                          case R.id.selectMany:
 
                             //     Intent i = new Intent(MainActivity.this, MyService.class);
                             //     startService(i);

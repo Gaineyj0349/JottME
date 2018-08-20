@@ -31,12 +31,14 @@
      />
     <item
         android:id="@+id/project_manager"
-        android:title="Project Manager"
+        android:title="More developer Apps"
         />
     <item
         android:id="@+id/how_to_use"
         android:title="About this App"
         />
+
+
 
 
 

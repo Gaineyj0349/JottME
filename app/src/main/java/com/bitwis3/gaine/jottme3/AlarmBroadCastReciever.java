@@ -1,14 +1,18 @@
 package com.bitwis3.gaine.jottme3;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.util.Log;
 import android.widget.RemoteViews;
+
+import static android.content.Context.NOTIFICATION_SERVICE;
 
 public class AlarmBroadCastReciever extends BroadcastReceiver {
 
@@ -38,8 +42,7 @@ public class AlarmBroadCastReciever extends BroadcastReceiver {
 
             Notification.Builder builder =
                     new Notification.Builder(context);
-       //     builder.setSmallIcon
-         //           (android.R.drawable.ic_menu_info_details);
+
             builder.setSmallIcon
                     (R.drawable.ic_pages_black_24dp);
             Intent intent2 =
@@ -54,23 +57,45 @@ public class AlarmBroadCastReciever extends BroadcastReceiver {
             builder.setContentIntent(pendingIntent);
             builder.setContent(contentView);
             builder.setContentTitle(message);
+
             builder.setAutoCancel(true);
 
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                // Create the NotificationChannel
+                CharSequence name = "default use";
+                String description = "get reminders from this app";
+                int importance = NotificationManager.IMPORTANCE_DEFAULT;
+                NotificationChannel mChannel = new NotificationChannel("ChannelID", name, importance);
+                mChannel.setDescription(description);
+                // Register the channel with the system; you can't change the importance
+                // or other notification behaviors after this
+                NotificationManager notificationManager = (NotificationManager) context.getSystemService(
+                        NOTIFICATION_SERVICE);
+                notificationManager.createNotificationChannel(mChannel);
+                builder.setChannelId("ChannelID");
+            }
 
             Notification notification = builder.build();
+
+
+
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
             notification.defaults |= Notification.DEFAULT_SOUND;
             notification.defaults |= Notification.DEFAULT_VIBRATE;
 
-            notificationMgr = (NotificationManager)
-                    context.getSystemService(Context.NOTIFICATION_SERVICE);
+                notificationMgr = (NotificationManager)
+                        context.getSystemService(NOTIFICATION_SERVICE);
 
 
-            notificationMgr.notify(requestCodePassed, notification);
+                notificationMgr.notify(requestCodePassed, notification);
         }else if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
             Log.i("JOSH", "BOOT COMPLETE");
-            Intent i = new Intent(context, MyService.class);
-            context.startService(i);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                context.startForegroundService(new Intent(context, MyService.class));
+            } else {
+                context.startService(new Intent(context, MyService.class));
+            }
         }
        }
 

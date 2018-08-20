@@ -71,7 +71,8 @@ public class NotificationDelete extends AppCompatActivity {
        Intent intent = getIntent();
 
         jott = intent.getData().getSchemeSpecificPart();
-    //  jott = getIntent().getStringExtra("jott");
+
+      jott = jott.replace("'","\'");
 
         textView.setText(jott);
 
